@@ -27,12 +27,6 @@ def orangePortal(event):
     delete(orangePortalElements)  
     orangePortalElements = createPortal(event, '#ff6600')
     
-def delete(elements):
-    #Undraw all objects containing by elements array
-    for obj in elements:
-        salle.delete(obj)
-    #Reset elements array
-    elements = []
 
 bluePortalElements = []
 orangePortalElements = []
@@ -55,7 +49,6 @@ salle.create_line([1000, 0, 875, 125])
 salle.create_line([0, 0, 125, 125])
 
 salle.bind("<Button-1>", bluePortal)
-salle.bind("<Button-2>", delete)
 salle.bind("<Button-3>", orangePortal)
 
 photo=PhotoImage(file="Portal_Dude2.gif")
