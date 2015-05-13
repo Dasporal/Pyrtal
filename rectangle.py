@@ -9,10 +9,12 @@ class Rect():
         self.centerY = self.y + self.height/2
 
     def intersects(self, rect):
-        if(abs(self.centerX - rect.centerX) < (self.width + rect.width )/2 and abs(self.centerY - rect.centerY) < (self.height+rect.height)/2):
+        if(abs(self.centerX - rect.centerX) < (self.width + rect.width )/2 and abs(self.centerY - rect.centerY) < (self.height+rect.height)/2) and (rect.y-20 + rect.height < self.y + self.height < rect.y+20 + rect.height):
             return True
         else:
             return False
+
+
 
     """          width/2
               <--------->
